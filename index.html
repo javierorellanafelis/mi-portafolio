@@ -4,14 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Javier Orellana Felis</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Estilos generales */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background-color: #f4f4f4; }
+        
+        /* Encabezado */
+        header { background-color: #2c3e50; color: white; padding: 2rem 0; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { margin: 10px 0 0; font-size: 1.2rem; opacity: 0.9; }
+        
+        /* Navegación */
+        nav ul { list-style: none; padding: 0; margin-top: 20px; text-align: center; }
+        nav ul li { display: inline; margin: 0 15px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem; border-bottom: 2px solid transparent; transition: 0.3s; }
+        nav ul li a:hover { border-bottom: 2px solid #3498db; color: #3498db; }
+
+        /* Contenedor Principal */
+        main { max-width: 900px; margin: 30px auto; padding: 40px; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        
+        /* Secciones */
+        section { padding: 30px 0; border-bottom: 1px solid #eee; }
+        section:last-child { border-bottom: none; }
+        h2 { color: #2c3e50; border-left: 5px solid #3498db; padding-left: 15px; margin-bottom: 20px; }
+        h3 { color: #2980b9; margin-bottom: 5px; }
+
+        /* Foto de Perfil */
+        .perfil-container { text-align: center; }
+        .avatar { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid #3498db; display: block; margin: 0 auto 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        
+        /* Tarjetas de Proyectos/Experiencia */
+        .proyecto { background: #f8f9fa; padding: 20px; margin-bottom: 20px; border-radius: 8px; border-left: 4px solid #2c3e50; transition: transform 0.2s; }
+        .proyecto:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .fecha-lugar { font-size: 0.9rem; color: #666; margin-bottom: 10px; font-style: italic; }
+
+        /* Footer */
+        footer { text-align: center; padding: 20px; background-color: #2c3e50; color: white; margin-top: 40px; font-size: 0.9rem; }
+        
+        /* Enlaces de contacto */
+        .contacto-list { list-style: none; padding: 0; }
+        .contacto-list li { margin-bottom: 10px; }
+        .contacto-list a { color: #3498db; text-decoration: none; font-weight: bold; }
+    </style>
 </head>
 <body>
 
     <header>
         <h1>Javier Orellana Felis</h1>
-        <p>Técnico Informático y Especialista en Redes</p>
-        
+        <p>Técnico Informático | Especialista en Redes | CCNA</p>
         <nav>
             <ul>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -23,89 +63,35 @@
     </header>
 
     <main>
-
         <section id="sobre-mi">
             <h2>Sobre mí</h2>
             <div class="perfil-container">
-                <img src="avatar.jpg" alt="Foto de perfil de Javier Orellana" class="avatar">
-                
+                <img src="avatar.jpg" alt="Javier Orellana" class="avatar">
                 <p>
-                    Soy Técnico Informático con experiencia en soporte a usuarios, mantenimiento de hardware 
-                    y gestión de incidencias. Estoy <strong>especializado en redes</strong>, con habilidades 
-                    en la configuración y administración de routers, switches y firewalls, así como en 
-                    redes LAN, WAN y Wi-Fi.
+                    Técnico Informático con sólida experiencia en soporte a usuarios y mantenimiento de hardware. 
+                    Estoy <strong>especializado en redes</strong>, con dominio en la configuración de routers, switches y firewalls (Palo Alto, Aruba/HP).
+                    Me caracterizo por ofrecer soluciones efectivas bajo presión y garantizar el rendimiento óptimo de los sistemas.
                 </p>
-                <p>
-                    Me enfoco en ofrecer soluciones efectivas y garantizar el rendimiento óptimo de los sistemas.
-                    Soy capaz de trabajar bajo presión y tengo un nivel de Inglés B2.
-                </p>
-                <p><strong>Habilidades clave:</strong> Trabajo en equipo, Seguridad y gestión, Libre Office.</p>
             </div>
         </section>
 
         <section id="experiencia">
-            <h2>Experiencia Laboral</h2>
+            <h2>Experiencia Profesional</h2>
             
             <article class="proyecto">
-                <h3>Técnico de Redes - Inelcom (Ministerio de Defensa)</h3>
-                <p><strong>Abril 2024 - Presente | Madrid</strong></p>
-                <p>Soporte técnico y administración de dispositivos de red (Routers, Switches, Firewalls). 
-                   Uso de herramientas como MobilityMaster, Clearpass (Aruba/HP) y gestión de Firewalls Palo Alto.</p>
+                <h3>Técnico de Redes | Inelcom (Min. Defensa)</h3>
+                <p class="fecha-lugar">Abril 2024 - Presente | Madrid</p>
+                <p>Soporte técnico y administración avanzada de redes.</p>
                 <ul>
-                    <li>Diagnóstico y resolución de problemas de conectividad.</li>
-                    <li>Configuración de redes LAN, WAN y Wi-Fi.</li>
-                    <li>Monitoreo de rendimiento y creación de manuales de red.</li>
+                    <li>Gestión de firewalls Palo Alto y herramienta Panorama.</li>
+                    <li>Uso de MobilityMaster y Clearpass.</li>
+                    <li>Configuración de LAN, WAN y Wi-Fi.</li>
+                    <li>Resolución de incidencias críticas de conectividad.</li>
                 </ul>
             </article>
 
             <article class="proyecto">
-                <h3>Técnico Informático (Prácticas) - Eurobanan</h3>
-                <p><strong>Marzo 2023 - Julio 2023 | Madrid</strong></p>
-                <p>Soporte a usuarios, recepción y resolución de incidencias.</p>
+                <h3>Técnico Informático | Eurobanan</h3>
+                <p class="fecha-lugar">Marzo 2023 - Julio 2023 | Madrid</p>
                 <ul>
-                    <li>Actualización de hardware y software.</li>
-                    <li>Configuración de ordenadores, portátiles e impresoras.</li>
-                    <li>Investigación de problemas de red.</li>
-                </ul>
-            </article>
-
-            <article class="proyecto">
-                <h3>Recepción y Control - Prosegur</h3>
-                <p><strong>Agosto 2021 - Abril 2024 | Madrid</strong></p>
-                <p>Gestión de control de accesos, atención al cliente y uso de aplicaciones Office 365 en clientes como Arquia Bank y Mutua Madrileña.</p>
-            </article>
-        </section>
-
-        <section id="formacion">
-            <h2>Formación Académica</h2>
-            <ul>
-                <li>
-                    <strong>Grado Medio en Sistemas Microinformáticos y Redes</strong>
-                    <br>Colegio Tajamar, Madrid (2019 - 2023)
-                    <br><em>Montaje y mantenimiento de equipos, redes locales y servicios en red.</em>
-                </li>
-                <li>
-                    <strong>Certificación CCNA: Introducción a las redes</strong>
-                    <br>(2025)
-                </li>
-            </ul>
-        </section>
-
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Estoy disponible para nuevos retos profesionales en Madrid.</p>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:javierorellanafelis@gmail.com">javierorellanafelis@gmail.com</a></li>
-                <li><strong>Teléfono:</strong> 651 360 969</li>
-                <li><strong>Ubicación:</strong> Madrid, España</li>
-            </ul>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Javier Orellana Felis. Portafolio Web.</p>
-    </footer>
-
-</body>
-</html>
+                    <li>Soporte directo a usuarios e investigación de problemas de red.</li>
