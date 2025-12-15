@@ -7,44 +7,44 @@
     
     <style>
         /* Estilos generales */
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background-color: #f4f4f4; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background-color: #f8f9fa; }
         
-        /* Encabezado */
+        /* Encabezado y Navegación */
         header { background-color: #2c3e50; color: white; padding: 2rem 0; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        header p { margin: 10px 0 0; font-size: 1.2rem; opacity: 0.9; }
+        header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
+        header p { margin: 10px 0 0; font-size: 1.2rem; opacity: 0.9; color: #ecf0f1; }
         
-        /* Navegación */
-        nav ul { list-style: none; padding: 0; margin-top: 20px; text-align: center; }
+        nav { background: #34495e; padding: 10px 0; }
+        nav ul { list-style: none; padding: 0; margin: 0; text-align: center; }
         nav ul li { display: inline; margin: 0 15px; }
-        nav ul li a { color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem; border-bottom: 2px solid transparent; transition: 0.3s; }
-        nav ul li a:hover { border-bottom: 2px solid #3498db; color: #3498db; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: 0.3s; }
+        nav ul li a:hover { color: #3498db; }
 
         /* Contenedor Principal */
-        main { max-width: 900px; margin: 30px auto; padding: 40px; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        main { max-width: 900px; margin: 30px auto; padding: 20px; background: white; box-shadow: 0 0 20px rgba(0,0,0,0.05); border-radius: 8px; }
         
         /* Secciones */
-        section { padding: 30px 0; border-bottom: 1px solid #eee; }
+        section { padding: 40px 0; border-bottom: 1px solid #eee; }
         section:last-child { border-bottom: none; }
-        h2 { color: #2c3e50; border-left: 5px solid #3498db; padding-left: 15px; margin-bottom: 20px; }
-        h3 { color: #2980b9; margin-bottom: 5px; }
-
-        /* Foto de Perfil */
-        .perfil-container { text-align: center; }
-        .avatar { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid #3498db; display: block; margin: 0 auto 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        h2 { color: #2c3e50; border-left: 5px solid #3498db; padding-left: 15px; margin-bottom: 25px; text-transform: uppercase; font-size: 1.5rem; }
         
-        /* Tarjetas de Proyectos/Experiencia */
-        .proyecto { background: #f8f9fa; padding: 20px; margin-bottom: 20px; border-radius: 8px; border-left: 4px solid #2c3e50; transition: transform 0.2s; }
-        .proyecto:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .fecha-lugar { font-size: 0.9rem; color: #666; margin-bottom: 10px; font-style: italic; }
+        /* Foto de Perfil */
+        .perfil-container { text-align: center; margin-bottom: 20px; }
+        .avatar { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid #3498db; display: block; margin: 0 auto 20px; }
+        
+        /* Experiencia y Proyectos (Articles) */
+        article { background: #f1f2f6; padding: 20px; margin-bottom: 20px; border-radius: 8px; border-left: 4px solid #2c3e50; }
+        article h3 { color: #2980b9; margin-top: 0; }
+        .fecha { font-size: 0.9rem; color: #7f8c8d; font-style: italic; margin-bottom: 10px; display: block; }
+        article ul { margin-top: 10px; padding-left: 20px; }
+        
+        /* Listas de habilidades y contacto */
+        .skills-list, .contact-list { list-style: none; padding: 0; }
+        .contact-list li { margin-bottom: 10px; font-size: 1.1rem; }
+        .contact-list a { color: #3498db; text-decoration: none; font-weight: bold; }
 
         /* Footer */
-        footer { text-align: center; padding: 20px; background-color: #2c3e50; color: white; margin-top: 40px; font-size: 0.9rem; }
-        
-        /* Enlaces de contacto */
-        .contacto-list { list-style: none; padding: 0; }
-        .contacto-list li { margin-bottom: 10px; }
-        .contacto-list a { color: #3498db; text-decoration: none; font-weight: bold; }
+        footer { text-align: center; padding: 20px; background-color: #2c3e50; color: white; margin-top: 40px; }
     </style>
 </head>
 <body>
@@ -52,64 +52,104 @@
     <header>
         <h1>Javier Orellana Felis</h1>
         <p>Técnico Informático | Especialista en Redes | CCNA</p>
-        <nav>
-            <ul>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#formacion">Formación</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#formacion">Formación</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
 
     <main>
         <section id="sobre-mi">
             <h2>Sobre mí</h2>
             <div class="perfil-container">
-                <img src="avatar.jpg" alt="Javier Orellana" class="avatar">
-                <p>
-                    Técnico Informático con sólida experiencia en soporte a usuarios y mantenimiento de hardware. 
-                    Estoy <strong>especializado en redes</strong>, con dominio en la configuración de routers, switches y firewalls (Palo Alto, Aruba/HP).
-                    Me caracterizo por ofrecer soluciones efectivas bajo presión y garantizar el rendimiento óptimo de los sistemas.
-                </p>
+                <img src="avatar.jpg" alt="Foto de perfil de Javier Orellana" class="avatar">
             </div>
+            <p>
+                Soy Técnico Informático con sólida experiencia en soporte a usuarios, mantenimiento de hardware 
+                y gestión de incidencias. Estoy <strong>especializado en redes</strong>, con habilidades avanzadas 
+                en la configuración y administración de routers, switches y firewalls.
+            </p>
+            <p>
+                Me enfoco en ofrecer soluciones efectivas, garantizar el rendimiento óptimo de los sistemas y 
+                tengo capacidad para trabajar bajo presión.
+            </p>
         </section>
 
         <section id="experiencia">
             <h2>Experiencia Profesional</h2>
             
-            <article class="proyecto">
+            <article>
                 <h3>Técnico de Redes | Inelcom (Min. Defensa)</h3>
-                <p class="fecha-lugar">Abril 2024 - Presente | Madrid</p>
-                <p>Soporte técnico y administración avanzada de redes.</p>
+                <span class="fecha">Abril 2024 - Presente | Madrid</span>
+                <p>Soporte técnico y administración de infraestructura de red.</p>
                 <ul>
-                    <li>Gestión de firewalls Palo Alto y herramienta Panorama.</li>
-                    <li>Uso de MobilityMaster y Clearpass.</li>
-                    <li>Configuración de LAN, WAN y Wi-Fi.</li>
-                    <li>Resolución de incidencias críticas de conectividad.</li>
+                    <li>Gestión de Firewalls Palo Alto y herramienta Panorama.</li>
+                    <li>Administración de dispositivos Aruba/HP con MobilityMaster y Clearpass.</li>
+                    <li>Configuración de redes LAN, WAN y Wi-Fi.</li>
+                    <li>Diagnóstico y resolución de problemas de conectividad críticos.</li>
                 </ul>
             </article>
 
-            <article class="proyecto">
-                <h3>Técnico Informático | Eurobanan</h3>
-                <p class="fecha-lugar">Marzo 2023 - Julio 2023 | Madrid</p>
+            <article>
+                <h3>Técnico Informático (Prácticas) | Eurobanan</h3>
+                <span class="fecha">Marzo 2023 - Julio 2023 | Madrid</span>
                 <ul>
-                    <li>Soporte directo a usuarios e investigación de problemas de red.</li>
-                    <section id="contacto">
+                    <li>Soporte a usuarios y resolución de incidencias.</li>
+                    <li>Actualización de hardware y software.</li>
+                    <li>Identificación e investigación de problemas de red.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Recepción y Control | Prosegur</h3>
+                <span class="fecha">Agosto 2021 - Abril 2024 | Madrid</span>
+                <p>Gestión de accesos y atención al cliente en Arquia Bank y Mutua Madrileña. Uso de herramientas Office 365 y sistemas de control (Desico).</p>
+            </article>
+        </section>
+
+        <section id="formacion">
+            <h2>Formación Académica</h2>
+            <ul>
+                <li>
+                    <strong>Grado Medio en Sistemas Microinformáticos y Redes</strong>
+                    <br>Colegio Tajamar, Madrid (2019 - 2023)
+                    <br><em>Instalación y mantenimiento de sistemas, redes locales y servicios en red.</em>
+                </li>
+                <li>
+                    <strong>Certificación CCNA: Introducción a las redes</strong>
+                    <br>(2025)
+                </li>
+            </ul>
+            
+            <h3>Habilidades Técnicas</h3>
+            <ul>
+                <li><strong>Redes:</strong> Experto en Seguridad y Gestión.</li>
+                <li><strong>Software:</strong> Libre Office (Avanzado), Office 365.</li>
+                <li><strong>Idiomas:</strong> Inglés (Nivel B2).</li>
+                <li><strong>Habilidades Blandas:</strong> Trabajo en equipo, Comunicación, Automotivación.</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
             <h2>Contacto</h2>
-            <ul class="contacto-list">
+            <ul class="contact-list">
                 <li>📧 <a href="mailto:javierorellanafelis@gmail.com">javierorellanafelis@gmail.com</a></li>
                 <li>📞 651 360 969</li>
                 <li>📍 Madrid, España</li>
-                <li>🚗 Carnet B</li>
+                <li>🚗 Licencia de conducir B</li>
             </ul>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2025 Javier Orellana Felis. Diseñado para clase.</p>
+        <p>&copy; 2025 Javier Orellana Felis. Portafolio Web.</p>
     </footer>
 
 </body>
 </html>
-
